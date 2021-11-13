@@ -82,4 +82,25 @@ a {
         cursor: pointer;
         padding-right: 0.5rem;
     }
+    &__form {
+        background: none;
+        border: none;
+        transition: width 0.3s;
+        width: 3.4rem;
+        font: 0.9rem/1 'Open Sans', sans-serif;
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        &::placeholder{
+            color: white;
+        }
+        &:focus{
+            border: none;
+            outline: none;
+            width: 10rem;
+            background: white;
+            &::placeholder{
+                color: $main_dark;
+            }   
+        }
+    }
 }
