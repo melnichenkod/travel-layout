@@ -104,3 +104,45 @@ a {
         }
     }
 }
+.section__main {
+    display flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: $main_shift;
+    right: $main_shift;
+    top: 14vw;
+}
+
+.main-title {
+    font-size: 1rem;
+    margin-bottom: 6.2em;
+    &__summary {
+        display flex;
+        align-items: center;
+        font-weight: 700;
+        color: $main_highlite;
+        text-transform: uppercase;
+        letter-spacing: .34em;
+        margin-bottom 1.5em
+
+        &::before {
+            content: '';
+            display: block;
+            width: 4em;
+            height: 3px;
+            margin-right: 1.5em;
+            background: $main_highlite
+        }
+    }
+    &__text{
+        font-size: 5.4em;
+        font-weight: 700;
+        line-height: 1.1;
+        &_regular{
+            display: block;
+            font-size: 0.9em;
+            font-weight: 400;
+        }
+    }
+}
