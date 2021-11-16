@@ -1,6 +1,7 @@
 $main_dark = #000
 $main_lite = #fff
 $main_highlite = #FBD784
+$main_highlite_title = #FFC178
 $main_buttons = #FFA343
 $main_shift = 4.7rem;
 
@@ -121,7 +122,7 @@ a {
         display flex;
         align-items: center;
         font-weight: 700;
-        color: $main_highlite;
+        color: $main_highlite_title;
         text-transform: uppercase;
         letter-spacing: .34em;
         margin-bottom 1.5em
@@ -132,7 +133,7 @@ a {
             width: 4em;
             height: 3px;
             margin-right: 1.5em;
-            background: $main_highlite
+            background: $main_highlite_title
         }
     }
     &__text{
@@ -150,26 +151,58 @@ a {
     position: absolute;
     left: 0;
     top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__title {
         writing-mode: vertical-rl;
         margin-bottom: 1.3rem;
     }
+    &__item{
+        margin-bottom: 1rem;    
+    }
+    &__link {
+        opacity: 1;
+        transition: opacity 0.3s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
 }
+.scroll-down {
+   display: flex;
+   cursor: pointer;
+   opacity: 1;
+   transition: 0.3s;
+    &:hover {
+        opacity: 0.7;
+    }
+    &__icon {
+        margin: 0.2em 0 0 0.5em;
+    }
+}
+/* Icons */
 .icon__instagram{
     width: 1.3rem;
     height: 1.3rem;
     background: url('/images/icons/instagram.svg') no-repeat center center;
-    background-size: cover;    
+    background-size: contain;    
 }
 .icon__twitter{
     width: 1.3rem;
     height: 1.3rem;
     background: url('/images/icons/twitter.svg') no-repeat center center;
-    background-size: cover;    
+    background-size: contain;    
 }
 .icon__facebook{
     width: 1.3rem;
     height: 1.3rem;
     background: url('/images/icons/facebook.svg') no-repeat center center;
-    background-size: cover;    
+    background-size: contain;    
+}
+.icon__arrow_downward {
+    width: 1rem;
+    height: 1.4rem;
+    background: url('/images/icons/arrow_downward.svg') no-repeat center center;
+    background-size: contain;
 }
