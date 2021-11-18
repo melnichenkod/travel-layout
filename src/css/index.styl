@@ -18,7 +18,8 @@ a {
     transition: opacity 0.3s;
     opacity: 1;
     &:visited{
-        color: darken($main_highlite, 10)
+        // color: darken($main_highlite, 10);
+        color: $main_highlite;
     }
     &:hover,
     &:active {
@@ -26,9 +27,19 @@ a {
     }
 }
 /* Main styles */
+.content{
+    max-width: 1460px;
+    padding: 0 $main_shift $main_shift;
+    margin: 0 auto;
+    p {
+        margin-bottom: 1.3em;
+    }   
+}
 .cover-space{
     padding-bottom: 82%;    
 }
+
+/* Header */
 .header{
     position: absolute;
     top: 2rem;
@@ -147,6 +158,20 @@ a {
         }
     }
 }
+.main-title_small {
+    font-size: 1rem;
+    margin-bottom: 1.8em;
+    .main-title__summary {
+        color: $main_highlite; 
+        &::before {
+            background: $main_highlite; 
+        }   
+    }
+    .main-title__text {
+        font-size: 3.4em;
+        line-height: 1.4;
+    }
+}
 .social-networks{
     position: absolute;
     left: 0;
@@ -205,4 +230,82 @@ a {
     height: 1.4rem;
     background: url('/images/icons/arrow_downward.svg') no-repeat center center;
     background-size: contain;
+}
+.icon__arrow_rightward {
+    width: 1.6rem;
+    height: 1.2rem;
+    background: url('/images/icons/arrow_rightward.svg') no-repeat center center;
+    background-size: contain;
+}
+
+/* Section-cols */
+.section-cols {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-col {
+    &:first-child{
+        width: 40%;
+    }
+    &:last-child {
+        width: 44%;
+    }
+    &__image {
+        width: 100%
+    }
+}
+.arrow-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &__icon {
+        margin: 0.1rem 0 0 0.4rem;
+    }    
+}
+
+@media screen and (max-width: 1790px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+    .content {
+        max-width: 1200px;
+    }
+    .section-col {
+        &:first-child {
+            width: 40%;
+        }
+        &:last-child {
+            width: 50%;
+        }   
+    }
+}
+@media screen and (max-width: 1550px) {
+    html,
+    body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1380px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+    .content {
+        max-width: 1200px;
+    }
+    .section-col {
+        &:first-child {
+            width: 43%;
+        }
+        &:last-child {
+            width: 50%;
+        }   
+    }
+}
+@media screen and (max-width: 1310px) {
+   .main-title {
+       font-size: 0.9rem;
+    }
 }
