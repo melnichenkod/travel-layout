@@ -1,12 +1,12 @@
 {
-	"name": "lab.webelart",
+	"name": "travel",
 	"version": "0.0.1",
-	"description": "lab.webelart.com",
+	"description": "",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:liveldi/lab.webelart.git"
+		"url": ""
 	},
-	"author": "Elena Litvinova",
+	"author": "Dmytro Melnichenko",
 	"license": "ISC",
 	"engines": {
 		"node": ">=10",
