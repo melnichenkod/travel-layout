@@ -3,7 +3,9 @@ $main_lite = #fff
 $main_highlite = #FBD784
 $main_highlite_title = #FFC178
 $main_buttons = #FFA343
+$main_border = rgba($main_lite, 30%)
 $main_shift = 4.7rem;
+$border_radius = 0.44em;
 
 html,
 body {
@@ -274,9 +276,11 @@ a {
     &__content {
         width: 44%;
     }
-    /* &__image {
-        width: 100%
-    } */
+}
+.section-explore {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $main_border;
+    margin-bottom: 3rem;
 }
 .arrow-link {
     display: flex;
@@ -305,6 +309,36 @@ a {
         right: 0;
         text-align: center;
         background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%)
+    }
+}
+/* Section Explore */
+.start {
+    display: flex;
+    justify-content: space-between;
+    &__title {
+        font-size: 2.66rem;
+        font-weight: 700;
+        margin-right: 3rem;
+    }
+    &__content {
+        display:  flex;
+        align-items: baseline;
+    }
+    &__desc {
+        font-size: 1.22rem;
+        margin-right: 3rem;
+    }
+}
+.button {
+    border: none;
+    background: $main_buttons;
+    font: 700 0.9rem/1 'Open Sans', sans-serif;
+    padding: 1.6em 4.5em 1.4em;
+    border-radius: $border_radius;
+    cursor: pointer;
+    transition: background 0.3s;
+    &:hover {
+        background: $main_highlite;
     }
 }
 
