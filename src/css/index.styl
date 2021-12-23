@@ -341,6 +341,36 @@ a {
         background: $main_highlite;
     }
 }
+/* Footer */
+.subscribe {
+    width: 27%;
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 1.38em;
+    }
+}
+.email {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 1px solid $main_border;
+    &__form {
+        background: none;
+        border: none;
+        font: 0.83rem/1 'Open Sans', sans-serif;
+        padding: 1.1em 0.77em 1.77em;
+        color: $main_lite;
+        &::placeholder{
+            color: rgba($main_lite, 50%);
+        }
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+}
 
 @media screen and (max-width: 1790px) {
     html,
