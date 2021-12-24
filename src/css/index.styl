@@ -389,6 +389,28 @@ a {
     background-size: contain;
 }
 
+.menu {
+    &__title {
+        color: $main_highlite;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    &__item {
+        bargin-bottom: 0.8rem;
+    }
+    &__link {
+        color: $main_lite;
+        text-decoration: none;
+        &:hover,
+        &:visited,
+        &:active {
+            color: $main_lite;
+        }
+    }
+}
+
+
 @media screen and (max-width: 1790px) {
     html,
     body {

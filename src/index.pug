@@ -95,4 +95,22 @@ html(lang="ru")
                             input.email__form(type="text" placeholder="Email address")
                             button.button.email__button(type="submit")
                                 .button__icon.icon__right
+                    .menu 
+                        h4.menu__title Service 
+                        ul.menu__list 
+                            each link in ['Email Marketing', 'Compaigns', 'Brandings', 'Offline']
+                                li.menu__item 
+                                    a.menu__link(htef="#")= link
+                    .menu 
+                        h4.menu__title About 
+                        ul.menu__list 
+                            each link in ['Our Story', 'Benefits', 'Team', 'Careers']
+                                li.menu__item 
+                                    a.menu__link(htef="#")= link
+                    .menu 
+                        h4.menu__title Help 
+                        ul.menu__list 
+                            each link in ['FAQs', 'Contact Us']
+                                li.menu__item 
+                                    a.menu__link(htef="#")= link
         script(src="/js/index.js") 
