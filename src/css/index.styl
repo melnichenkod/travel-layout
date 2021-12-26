@@ -230,32 +230,32 @@ a {
 }
 /* Icons */
 .icon__instagram{
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.3em;
+    height: 1.3em;
     background: url('/images/icons/instagram.svg') no-repeat center center;
     background-size: contain;    
 }
 .icon__twitter{
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1.3em;
+    height: 1.3em;
     background: url('/images/icons/twitter.svg') no-repeat center center;
     background-size: contain;    
 }
 .icon__facebook{
-    width: 1.3rem;
+    width: 1.3em;
     height: 1.3rem;
     background: url('/images/icons/facebook.svg') no-repeat center center;
     background-size: contain;    
 }
 .icon__arrow_downward {
-    width: 1rem;
-    height: 1.4rem;
+    width: 0.9em;
+    height: 1.4em;
     background: url('/images/icons/arrow_downward.svg') no-repeat center center;
     background-size: contain;
 }
 .icon__arrow_rightward {
-    width: 1.6rem;
-    height: 1.2rem;
+    width: 1.4em;
+    height: 0.9em;
     background: url('/images/icons/arrow_rightward.svg') no-repeat center center;
     background-size: contain;
 }
@@ -383,8 +383,8 @@ a {
 }
 
 .icon__right {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.5em;
+    height: 1.5em;
     background: url('/images/icons/arrow_right.svg') no-repeat center center;
     background-size: contain;
 }
@@ -406,6 +406,35 @@ a {
         &:visited,
         &:active {
             color: $main_lite;
+        }
+    }
+}
+
+.footer {
+    &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+    }
+    
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2.22rem;
+    }
+    &__link {
+        color: $main_lite;
+        text-decoration: none;
+        font-size: 0.833rem;
+        display: inline-block;
+        margin-right: 4.5rem;
+        &:hover,
+        &:visited,
+        &:active {
+            color: $main_lite;
+        }
+        &:last-child {
+            margin-right: 0;
         }
     }
 }
