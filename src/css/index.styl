@@ -216,6 +216,22 @@ a {
         }
     }
 }
+.social-horisontal{
+    display: flex;
+    font-size: 1.3rem;
+    &__item {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+    &__link {
+        display: inline-block;
+        opacity: 1;
+        transition: opacity 0.3s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
 .scroll-down {
    display: flex;
    cursor: pointer;
