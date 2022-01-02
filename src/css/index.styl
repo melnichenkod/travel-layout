@@ -13,11 +13,12 @@ body {
     
 }
 body {
-    transform: translate3d(0, 0, 0)
+    //transform: translate3d(0, 0, 0)
     background: $main_dark url("/images/cover.jpg") no-repeat center top;
+    overflow-x: hidden;
     background-size: 100% auto;
     color: $main_lite;
-    transition: transform 0.3s;
+    //transition: transform 0.3s;
 }
 
 a {
@@ -574,13 +575,11 @@ a {
         }
     }
     .page {
-        overflow: hidden;
         transform: translate3D(0, 0, 0);
         transition: transform 0.3s;
     }
 
     .body_burger-opened {
-        overflow: hidden;
         .page {
             transform: translate3D(-70vw, 0, 0);
         }
