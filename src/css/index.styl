@@ -430,7 +430,7 @@ a {
         margin-bottom: 0.6rem;
     }
     &__item {
-        bargin-bottom: 0.8rem;
+        margin-bottom: 0.8rem;
     }
     &__link {
         color: $main_lite;
@@ -691,7 +691,7 @@ a {
         padding: 0 1.5rem 1.5rem;
     }
     .section-cols {
-        display: block;
+        flex-direction: column;
     }
     .section-col {
         &:first-child,
@@ -700,7 +700,62 @@ a {
         }
 
         &__image {
+            order: 1;
             margin-bottom: 2.5rem;
+        }
+        &__content {
+            order: 2;
+        }
+    }
+    .start {
+        display: block;
+        text-align: center;
+        &__title {
+            margin-right: 0;
+        }
+        &__content {
+            display: block;
+        }
+        &__desc {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+        .button {
+            width: 100%;
+        }
+        
+    }
+
+    .footer {
+        &__content {
+            display: block;
+            margin-bottom: 3rem;
+        }
+        .subscribe {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        .menu {
+            text-align: center;    
+        }
+        &__bottom {
+            display: block;
+            padding: 0;
+            text-align: center;
+        }
+        &__link {
+            margin-right: 0;
+            margin: 0 1rem;
+        }
+        &__terms {
+            margin-bottom: 1.5rem;
+        }
+        .social-horisontal {
+            justify-content: center;
+            &__item {
+                margin-left: 0;
+                margin: 0 1rem;
+            }
         }
     }
 
