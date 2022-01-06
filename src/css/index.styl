@@ -35,6 +35,9 @@ a {
     }
 }
 /* Main styles */
+.page {
+    overflow: hidden;
+}
 .content{
     max-width: 1460px;
     padding: 0 $main_shift $main_shift;
@@ -54,7 +57,8 @@ a {
 
 /* Header */
 .header{
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top: 2rem;
     width: 100%;
     &__content {
@@ -140,7 +144,7 @@ a {
 } */
 
 .main-title {
-    font-size: 1rem;
+    // font-size: 1rem;
     margin-bottom: 6.2em;
     &__summary {
         display flex;
@@ -149,7 +153,8 @@ a {
         color: $main_highlite_title;
         text-transform: uppercase;
         letter-spacing: .34em;
-        margin-bottom 1.5em
+        margin-bottom 1.5em;
+        font-size: 1.2em;
 
         &::before {
             content: '';
@@ -370,6 +375,7 @@ a {
     border-radius: $border_radius;
     cursor: pointer;
     transition: background 0.3s;
+    color: $main_dark;
     &:hover {
         background: $main_highlite;
     }
@@ -544,8 +550,9 @@ a {
     }
 }
 
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 700px) {
     .burger-menu {
+        
         position: fixed;
         z-index: 999;
         display: block;
@@ -556,7 +563,7 @@ a {
         width: 70vw;
         transform: translate3D(calc(70vw + 2px), 0, 0);
         transition: transform 0.3s;
-        
+        // display: none;
         
         &__content {
             height: 100vh;
@@ -586,8 +593,8 @@ a {
         }
     }
     .page {
-        transform: translate3D(0, 0, 0);
-        transition: transform 0.3s;
+        // transform: translate3D(0, 0, 0);
+        // transition: transform 0.3s;
     }
 
     .body_burger-opened {
@@ -635,7 +642,7 @@ a {
     }
 }
 
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 700px) {
     .header {
         &__content {
             padding: 0 1.5rem;
@@ -657,13 +664,21 @@ a {
         margin-bottom: 2em; 
         &__summary {
             display: block;
+
             &::before {
                 display: none;
             }
         }
+        .main-title__summary::after {
+            display: none;
+            margin-bottom: 1em;
+        }
         &__text {
             font-size: 3em;
             line-height: 1.3;
+        }
+        &__small {
+            font-size: 0.8rem;
         }
     }
 
@@ -701,7 +716,7 @@ a {
 
         &__image {
             order: 1;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         &__content {
             order: 2;
@@ -758,5 +773,20 @@ a {
             }
         }
     }
+    .gallery {
+        &__slide {
+            padding-bottom: 175%;
+        }
+        &__content {
+            top: 0;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, .3)
+        }
+        .content_small {
+            padding: 1.5rem;
+        }
+    }
+    
 
 }
