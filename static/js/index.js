@@ -20,3 +20,23 @@ burgerControlNode.addEventListener('click', (event) => {
 burgerSpaceCoverNode.addEventListener('click', (_event) => {
   bodyNode.classList.remove(BODY_BURGER_OPENED);
 });
+/* 
+Sticky header
+*/
+const HEADER_SCROLLED_CLASS = 'header_scrolled';
+const headerNode = document.querySelector('.header');
+const stickyStartScroll = 20;
+
+window.addEventListener('scroll', () => {
+  if (
+        window.scrollY >= 20
+        && !headerNode.classList.contains(HEADER_SCROLLED_CLASS)
+    ) {
+        headerNode.classList.add(HEADER_SCROLLED_CLASS)
+  } else if (
+        window.scrollY < 20 
+        && headerNode.classList.contains(HEADER_SCROLLED_CLASS)
+    ) {
+        headerNode.classList.remove(HEADER_SCROLLED_CLASS)
+  }
+})
