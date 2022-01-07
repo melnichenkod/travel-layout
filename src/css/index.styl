@@ -60,7 +60,7 @@ a {
     position: sticky;
     z-index: 999;
     top: 0;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     width: 100%;
     transition: background 0.3s;
 
@@ -574,7 +574,7 @@ a {
         &__content {
             height: 100vh;
             display: block;
-            padding: 1.3rem 0 2rem;
+            padding: 0 0 2rem;
             box-sizing: border-box;
             display: grid;
             grid-template-columns: 1fr;
@@ -585,9 +585,9 @@ a {
             display: block;
             width: 2rem;
             height: 2rem;
-            position: absolute;
-            left: calc(-4.7rem - 2rem);
-            top: 2.25rem;
+            // position: absolute;
+            // left: calc(-4.7rem - 2rem);
+            // top: 2.25rem;
             background: url('../images/icons/menu.svg') no-repeat center center;
             background-size: contain;
             border: none;
@@ -598,10 +598,13 @@ a {
             }
         }
     }
-    .logo {
+    .logo, .burger-menu__control {
         transform: translate3D(0, 0, 0);
         transition: transform 0.3s;
+        position: relative;
+        z-index: 999;
     }
+    
     .page {
         transform: translate3D(0, 0, 0);
         transition: transform 0.3s;
@@ -611,7 +614,8 @@ a {
         .page {
             transform: translate3D(-70vw, 0, 0);
         }
-        .logo {
+        .logo,
+        .burger-menu__control {
             transform: translate3D(-70vw, 0, 0);
         }
         
@@ -626,7 +630,7 @@ a {
             transform: translate3D(0, 0, 0);
 
             &__control {
-                left: -4rem;
+                // left: -4rem;
                 background-image: url('../images/icons/x.svg');
             }
         }
@@ -643,7 +647,7 @@ a {
             box-sizing: border-box;
             text-align: center;
             transition: all 0.3s;
-            padding: 1rem 1rem;
+            padding: 1.25rem 1.2rem;
 
             &:hover,
             &_active {
@@ -658,7 +662,9 @@ a {
 @media screen and (max-width: 700px) {
     .header {
         &__content {
-            padding: 0 1.5rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
         }
     }
 
@@ -669,9 +675,9 @@ a {
             padding: 0 1.5rem;
         }
     }
-    .burger-menu__control {
+    /* .burger-menu__control {
         left: calc(-1.5rem - 2rem)
-    }
+    } */
     .main-title {
         text-align: center;
         margin-bottom: 2em; 
