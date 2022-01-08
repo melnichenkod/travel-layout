@@ -54,7 +54,7 @@ scrollDownButton.addEventListener('click', (evt) => {
   evt.preventDefault();
   stopAnimationScroll();
   currentScroll = window.scrollY;
-  startAnimationScroll(scrollToNode.offsetTop);
+  startAnimationScroll(scrollToNode.offsetTop - 100);
 })
 
 function startAnimationScroll(newScrollY) {
